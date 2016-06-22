@@ -1,0 +1,32 @@
+.list{
+	list-style: none;
+	position: relative;
+	width: 640px;
+	height: 400px;
+	overflow: hidden;
+}
+.list .item{
+	display: none;
+}
+
+.list .item.active {
+	display: block;
+}
+
+.list .item img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.button-next{
+	padding: 10px 20px;
+	font-size: 14px;
+	font-weight: 600;
+	background: #00c300;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+}
+.button-next:hover{
+	background: red;
+}
