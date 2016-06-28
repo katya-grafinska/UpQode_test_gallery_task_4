@@ -239,8 +239,8 @@
     	$(".list").append("<li class='item'><img src='" + images[i] + "'></li>");
     }
 
-    $(".img-url").change( function() {
-    	console.log(this.val());
+    $(".form-add-image").submit( function() {
+    	($(".input-img-url").val());
     })
 
     function addImageToSlider(imageArray, sliderList) {
