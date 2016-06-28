@@ -234,19 +234,23 @@
 				'img/mesh-1363771_640.jpg',
 				'img/locomotive-1399080_640.jpg',
 				'img/strawberries-1350482_640.jpg'
-			];
+		];
+		
     for (var i = 0; i < images.length; i++) {
     	$(".list").append("<li class='item'><img src='" + images[i] + "'></li>");
     }
 
-    $(".form-add-image").submit( function() {
-    	($(".input-img-url").val());
-    })
+    $(".form-add-image").submit( function(event) {
+    	images.push($(".input-img-url").val());
+    	alert(images);
+    	$(".list").append("<li class='item'><img src='" + $(".input-img-url").val() + "'></li>");
+    	event.preventDefault();
+    });
 
-    function addImageToSlider(imageArray, sliderList) {
+    /*function addImageToSlider(imageArray, sliderList) {
 
     }
 
-    addImageToSlider(images, $(".list"));
+    addImageToSlider(images, $(".list"));*/
 
 })(jQuery, window, document);
