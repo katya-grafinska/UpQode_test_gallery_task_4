@@ -221,18 +221,32 @@
     		$('li.item').eq($index).addClass('active');  	
 			
     });
-   
-   /*$('.button-next').on('click',function(){
-     var active = $('.item.active'),
-      next_el = active.next();
 
-     $('.item').removeClass('active');
-     next_el.addClass('active');
+    /*в скрипті створити масив посилань на зображення, які виводяться в слайдер 
+під галереєю зробити інпут і кнопку submit 
+в інпут користувач вводить посилання на зображення 
+це зображення додається в масив інших зображень 
+і зображення додається в слайдер 
+і зробити autoplay*/
 
-     if (next_el.index() == '-1') {
-      $('.item').first().addClass('active');
-     }
-     
-    });*/
-      
+    var images = [
+				'img/squirrel-1407699_640.jpg',
+				'img/mesh-1363771_640.jpg',
+				'img/locomotive-1399080_640.jpg',
+				'img/strawberries-1350482_640.jpg'
+			];
+    for (var i = 0; i < images.length; i++) {
+    	$(".list").append("<li class='item'><img src='" + images[i] + "'></li>");
+    }
+
+    $(".img-url").change( function() {
+    	console.log(this.val());
+    })
+
+    function addImageToSlider(imageArray, sliderList) {
+
+    }
+
+    addImageToSlider(images, $(".list"));
+
 })(jQuery, window, document);

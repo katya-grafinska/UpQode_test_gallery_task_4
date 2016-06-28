@@ -1,10 +1,15 @@
-.list{
+img {
+	max-width: 100%;
+	height: auto;
+}
+.list {
 	list-style: none;
 	position: relative;
-	width: 640px;
-	height: 400px;
+	max-height: 400px;
 	overflow: hidden;
+	padding: 10px 0 0;
 }
+
 .list .item{
 	display: none;
 }
@@ -13,12 +18,7 @@
 	display: block;
 }
 
-.list .item img{
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-.button-next{
+.button-next {
 	padding: 10px 20px;
 	font-size: 14px;
 	font-weight: 600;
@@ -26,7 +26,12 @@
 	border: 0;
 	color: #fff;
 	cursor: pointer;
+	display: inline-block;
 }
 .button-next:hover{
 	background: red;
+}
+
+.form-add-image {
+	display: inline-block;
 }

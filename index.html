@@ -2,29 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Document</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<ul class="list">
-		<li class="item active">
-			<img src="img/duck-1463317_640.jpg" alt="">
-		</li>
-		<li class="item">
-			<img src="img/mesh-1363771_640.jpg" alt="">
-		</li>
-		<li class="item">
-			<img src="img/locomotive-1399080_640.jpg" alt="">
-		</li>
-		<li class="item">
-			<img src="img/squirrel-1407699_640.jpg" alt="">
-		</li>
-		<li class="item">
-			<img src="img/strawberries-1350482_640.jpg" alt="">
-		</li>
-	</ul>
-	<button class="button-next">Next Image</button>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-xs-10 col-lg-6 col-xs-offset-1 col-md-offset-2 col-lg-offset-3">
+				<ul class="list">
+					<li class="item active">
+						<img src="img/duck-1463317_640.jpg" alt="">
+					</li>
+				</ul>
+				<button class="button-next">Next Image</button>
+				<form action="" class="form-add-image">
+					<input type="url" class="img-url">
+					<input type="submit" class="btn btn-default" value="Додати зображення">
+				</form>
+			</div>
+		</div>
+	</div>
 	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
