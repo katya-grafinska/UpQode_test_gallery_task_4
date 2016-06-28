@@ -10,13 +10,13 @@ img {
 	padding: 10px 0 0;
 }
 
-.list .item{
+/* .list .item{
 	display: none;
 }
 
 .list .item.active {
 	display: block;
-}
+} */
 
 .button-next {
 	padding: 10px 20px;

@@ -203,11 +203,48 @@
         }
     }); 
     	
-    	var $index;
+    	//var $index;
+
+  	var images = [
+  		'img/duck-1463317_640.jpg',
+			'img/squirrel-1407699_640.jpg',
+			'img/mesh-1363771_640.jpg',
+			'img/locomotive-1399080_640.jpg',
+			'img/strawberries-1350482_640.jpg'
+		];
+
+		/*setTimeout( function(){
+			for (var i = 0; i < images.length; i++) {
+				$(".item img").attr('src', images[i])
+			}
+		}, 1000);*/
+
+		function showImagesWithInterval() {
+			var i = 1;
+			var timerId = setTimeout(function go() {
+		    $(".item img").attr('src', images[i]);
+		    if (i < images.length) {
+		    	setTimeout(go, 1000);
+		    	i++;
+		    }
+		    else {
+		    	i = 0;
+		    	setTimeout(go, 1000);
+		    }
+		  }, 1000);
+		}
+		
+		showImagesWithInterval();
+
+    $(".form-add-image").submit( function(event) {
+    	images.push($(".input-img-url").val());
+			$(".item img").attr('src', images[images.length-1]);
+			event.preventDefault();
+    });
    
     $('.button-next').on('click', function() {
 
-    		$index = $('li.item.active').index();
+    		/*$index = $('li.item.active').index();
     		$('li.item').removeClass('active');
 
     		if ($index === $('li.item').length-1) {
@@ -218,7 +255,8 @@
     			$index++;
     		}
 
-    		$('li.item').eq($index).addClass('active');  	
+    		$('li.item').eq($index).addClass('active');*/  	
+
 			
     });
 
@@ -229,23 +267,9 @@
 і зображення додається в слайдер 
 і зробити autoplay*/
 
-    var images = [
-				'img/squirrel-1407699_640.jpg',
-				'img/mesh-1363771_640.jpg',
-				'img/locomotive-1399080_640.jpg',
-				'img/strawberries-1350482_640.jpg'
-		];
-		
-    for (var i = 0; i < images.length; i++) {
-    	$(".list").append("<li class='item'><img src='" + images[i] + "'></li>");
-    }
+    
 
-    $(".form-add-image").submit( function(event) {
-    	images.push($(".input-img-url").val());
-    	alert(images);
-    	$(".list").append("<li class='item'><img src='" + $(".input-img-url").val() + "'></li>");
-    	event.preventDefault();
-    });
+    
 
     /*function addImageToSlider(imageArray, sliderList) {
 
